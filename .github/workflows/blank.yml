@@ -1,10 +1,21 @@
 name: Hello World
 on: workflow_dispatch
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello Steps
-        run: | 
-          echo "Welcome To the Git Hub Actions"
-          echo "How's Your learning going on"
+      - name: Build Steps
+        run: echo "This is Build job"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Phase
+        run: echo "this is Test phase"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Phase
+        run: echo " This is Deploy Phase"
+        
